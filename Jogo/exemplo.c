@@ -94,28 +94,11 @@ ESTADO inicializar_obstaculos (ESTADO e, int num){
 	return e;
 }
 
-/**ESTADO inicializar_porta (ESTADO e){
-	int x, y;
-
-    do {
-   		x = random() % TAM;
-    	y = random() % TAM;
-    } while (posicao_ocupada (e, x, y));
-
-	
-    e.porta[(int)e.num_porta].x = x;
-    e.porta[(int)e.num_porta].y = y;
-    e.num_porta++;
-
-	return e;
-
-} */
-
 
 ESTADO inicializar() {
 	ESTADO e = {{0}};
-	e.jog.x = 5;
-	e.jog.y = 9;
+	e.jog.x = random() % TAM;
+	e.jog.y = random() % TAM;
 	e.porta.x = random() % TAM;
 	e.porta.y = random() % TAM;
 	e = inicializar_inimigos(e, 20);
@@ -153,9 +136,7 @@ void imprime_jogador(ESTADO e) {
 }
 
 void imprime_porta (ESTADO e) {
-	//ABRIR_LINK("http://localhost/cgi-bin/exemplo?");
 	IMAGEM(e.porta.x, e.porta.y, ESCALA, "heart.png");
-	//FECHAR_LINK;
 }
 
 
@@ -183,17 +164,6 @@ void imprime_obstaculos(ESTADO e) {
 }
 
 
-
-
-/**void imprime_portas (ESTADO e) {
-	int i=0;
-	if (perto_porta(e) == 1)
-		imprime_porta(e);
-	else  IMAGEM(e.porta[i].x, e.porta[i].y, ESCALA, "heart.png");
-} */
-
-
-
 int main() {
 	srandom (time(NULL));
 	int x, y;
@@ -201,15 +171,15 @@ int main() {
 
 	COMECAR_HTML;
 	ABRIR_SVG(600, 600);
-    BACKGROUND;
+    	BACKGROUND;
 	for(y = 0; y < 10; y++)
 		for(x = 0; x < 10; x++)
 			imprime_casa_transparente(x, y);
 
 	imprime_inimigos(e);
 	imprime_obstaculos(e);
-    imprime_porta(e);
-    imprime_jogador(e);
+    	imprime_porta(e);
+    	imprime_jogador(e);
     
 
 	FECHAR_SVG;
