@@ -154,7 +154,7 @@ void imprime_inimigos(ESTADO e) {
 void imprime_obstaculos(ESTADO e) {
 	int i;
 	for(i = 0; i < e.num_obstaculos; i++)
-		IMAGEM(e.obstaculo[i].x, e.obstaculo[i].y, ESCALA, "rock.png");
+		IMAGEM(e.obstaculo[i].x, e.obstaculo[i].y, ESCALA, "rock1.png");
 }
 
 
