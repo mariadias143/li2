@@ -44,12 +44,6 @@ int posicao_ocupada (ESTADO e, int x, int y){
 	return tem_jogador(e, x, y) || tem_inimigo(e, x, y) || tem_obstaculo(e, x, y)|| tem_porta(e, x, y);
 }
 
-void imprime_casa(int x, int y) {
-	char *cor[] = {"#132024", "#143024"};
-	int idx = (x + y) % 2;
-	QUADRADO(x, y,ESCALA, cor[idx]);
-}
-
 void imprime_casa_transparente(int x, int y) {
 	QUADRADO_TRANSP(x, y,ESCALA);
 }
@@ -97,8 +91,8 @@ ESTADO inicializar_obstaculos (ESTADO e, int num){
 
 ESTADO inicializar() {
 	ESTADO e = {{0}};
-	e.jog.x = 5;
-	e.jog.y = 9;
+	e.jog.x = random() % TAM;
+	e.jog.y = random() % TAM;
 	e.porta.x = random() % TAM;
 	e.porta.y = random() % TAM;
 	e = inicializar_inimigos(e, 15);
@@ -136,9 +130,7 @@ void imprime_jogador(ESTADO e) {
 }
 
 void imprime_porta (ESTADO e) {
-	//ABRIR_LINK("http://localhost/cgi-bin/exemplo?");
 	IMAGEM(e.porta.x, e.porta.y, ESCALA, "earth.png");
-	//FECHAR_LINK;
 }
 
 
