@@ -47,8 +47,6 @@ Macros úteis para gerar CGIs
 @param ESCALA A escala do quadrado
 @param COR A cor de preenchimento do quadrado
 */
-#define QUADRADO(X, Y, ESCALA, COR)			printf("<rect x=%d y=%d width=%d height=%d fill=%s />\n", \
-												ESCALA * X, ESCALA* Y, ESCALA, ESCALA, COR)
 
 #define QUADRADO_TRANSP(X, Y, ESCALA)			printf("<rect x=%d y=%d width=%d height=%d opacity=0 />\n", \
 												ESCALA * X, ESCALA* Y, ESCALA, ESCALA)
