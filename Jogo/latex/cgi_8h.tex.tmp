@@ -1,0 +1,148 @@
+\hypertarget{cgi_8h}{}\section{cgi.\+h File Reference}
+\label{cgi_8h}\index{cgi.\+h@{cgi.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for cgi.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cgi_8h_a6852d85bc96a09e605bbf4a2dcfc7a5c}{I\+M\+A\+G\+E\+\_\+\+P\+A\+TH}~\char`\"{}http\+://localhost/images/\char`\"{}
+\item 
+\#define \hyperlink{cgi_8h_a93e071e1d9a809e4b5f9487700c40fd8}{C\+O\+M\+E\+C\+A\+R\+\_\+\+H\+T\+ML}~printf(\char`\"{}Content-\/Type\+: text/html\textbackslash{}n\textbackslash{}n\char`\"{})\hypertarget{cgi_8h_a93e071e1d9a809e4b5f9487700c40fd8}{}\label{cgi_8h_a93e071e1d9a809e4b5f9487700c40fd8}
+
+\begin{DoxyCompactList}\small\item\em Macro para começar o html. \end{DoxyCompactList}\item 
+\#define \hyperlink{cgi_8h_add6922252041c96ce305ff5254b816f6}{A\+B\+R\+I\+R\+\_\+\+S\+VG}(tamx,  tamy)~printf(\char`\"{}$<$svg width=\%d height=\%d$>$\textbackslash{}n\char`\"{}, tamx, tamy)
+\begin{DoxyCompactList}\small\item\em Macro para abrir um svg. \end{DoxyCompactList}\item 
+\#define \hyperlink{cgi_8h_a0644b71faea318f82651ca1b25db4737}{F\+E\+C\+H\+A\+R\+\_\+\+S\+VG}~printf(\char`\"{}$<$/svg$>$\textbackslash{}n\char`\"{})\hypertarget{cgi_8h_a0644b71faea318f82651ca1b25db4737}{}\label{cgi_8h_a0644b71faea318f82651ca1b25db4737}
+
+\begin{DoxyCompactList}\small\item\em Macro para fechar um svg. \end{DoxyCompactList}\item 
+\#define \hyperlink{cgi_8h_ab723ae3d4297ea0eb77cf3130ab15d42}{I\+M\+A\+G\+EM}(X,  Y,  E\+S\+C\+A\+LA,  F\+I\+C\+H\+E\+I\+RO)
+\begin{DoxyCompactList}\small\item\em Macro para criar uma imagem. \end{DoxyCompactList}\item 
+\#define \hyperlink{cgi_8h_a1ae379b260243788ce152a7b87ec0e03}{Q\+U\+A\+D\+R\+A\+DO}(X,  Y,  E\+S\+C\+A\+LA,  C\+OR)
+\begin{DoxyCompactList}\small\item\em Macro para criar um quadrado. \end{DoxyCompactList}\item 
+\#define {\bfseries Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP}(X,  Y,  E\+S\+C\+A\+LA)
+\item 
+\#define \hyperlink{cgi_8h_a4d82e0c3156f2bab2f120d251470623a}{A\+B\+R\+I\+R\+\_\+\+L\+I\+NK}(link)~printf(\char`\"{}$<$a xlink\+:href=\%s$>$\textbackslash{}n\char`\"{}, link)
+\begin{DoxyCompactList}\small\item\em Macro para abrir um link. \end{DoxyCompactList}\item 
+\#define \hyperlink{cgi_8h_ae69156d6ba1d240d0660fe831f683958}{F\+E\+C\+H\+A\+R\+\_\+\+L\+I\+NK}~printf(\char`\"{}$<$/a$>$\textbackslash{}n\char`\"{})\hypertarget{cgi_8h_ae69156d6ba1d240d0660fe831f683958}{}\label{cgi_8h_ae69156d6ba1d240d0660fe831f683958}
+
+\begin{DoxyCompactList}\small\item\em Macro para fechar o link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros úteis para gerar C\+G\+Is 
+
+\subsection{Macro Definition Documentation}
+\index{cgi.\+h@{cgi.\+h}!A\+B\+R\+I\+R\+\_\+\+L\+I\+NK@{A\+B\+R\+I\+R\+\_\+\+L\+I\+NK}}
+\index{A\+B\+R\+I\+R\+\_\+\+L\+I\+NK@{A\+B\+R\+I\+R\+\_\+\+L\+I\+NK}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{A\+B\+R\+I\+R\+\_\+\+L\+I\+NK}{ABRIR_LINK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+R\+I\+R\+\_\+\+L\+I\+NK(
+\begin{DoxyParamCaption}
+\item[{}]{link}
+\end{DoxyParamCaption}
+)~printf(\char`\"{}$<$a xlink\+:href=\%s$>$\textbackslash{}n\char`\"{}, link)}\hypertarget{cgi_8h_a4d82e0c3156f2bab2f120d251470623a}{}\label{cgi_8h_a4d82e0c3156f2bab2f120d251470623a}
+
+
+Macro para abrir um link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & O caminho para o link \\
+\hline
+\end{DoxyParams}
+\index{cgi.\+h@{cgi.\+h}!A\+B\+R\+I\+R\+\_\+\+S\+VG@{A\+B\+R\+I\+R\+\_\+\+S\+VG}}
+\index{A\+B\+R\+I\+R\+\_\+\+S\+VG@{A\+B\+R\+I\+R\+\_\+\+S\+VG}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{A\+B\+R\+I\+R\+\_\+\+S\+VG}{ABRIR_SVG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+R\+I\+R\+\_\+\+S\+VG(
+\begin{DoxyParamCaption}
+\item[{}]{tamx, }
+\item[{}]{tamy}
+\end{DoxyParamCaption}
+)~printf(\char`\"{}$<$svg width=\%d height=\%d$>$\textbackslash{}n\char`\"{}, tamx, tamy)}\hypertarget{cgi_8h_add6922252041c96ce305ff5254b816f6}{}\label{cgi_8h_add6922252041c96ce305ff5254b816f6}
+
+
+Macro para abrir um svg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tamx} & O comprimento do svg \\
+\hline
+{\em tamy} & A altura do svg \\
+\hline
+\end{DoxyParams}
+\index{cgi.\+h@{cgi.\+h}!I\+M\+A\+G\+E\+\_\+\+P\+A\+TH@{I\+M\+A\+G\+E\+\_\+\+P\+A\+TH}}
+\index{I\+M\+A\+G\+E\+\_\+\+P\+A\+TH@{I\+M\+A\+G\+E\+\_\+\+P\+A\+TH}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{I\+M\+A\+G\+E\+\_\+\+P\+A\+TH}{IMAGE_PATH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+M\+A\+G\+E\+\_\+\+P\+A\+TH~\char`\"{}http\+://localhost/images/\char`\"{}}\hypertarget{cgi_8h_a6852d85bc96a09e605bbf4a2dcfc7a5c}{}\label{cgi_8h_a6852d85bc96a09e605bbf4a2dcfc7a5c}
+Caminho para as imagens \index{cgi.\+h@{cgi.\+h}!I\+M\+A\+G\+EM@{I\+M\+A\+G\+EM}}
+\index{I\+M\+A\+G\+EM@{I\+M\+A\+G\+EM}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{I\+M\+A\+G\+EM}{IMAGEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+M\+A\+G\+EM(
+\begin{DoxyParamCaption}
+\item[{}]{X, }
+\item[{}]{Y, }
+\item[{}]{E\+S\+C\+A\+LA, }
+\item[{}]{F\+I\+C\+H\+E\+I\+RO}
+\end{DoxyParamCaption}
+)}\hypertarget{cgi_8h_ab723ae3d4297ea0eb77cf3130ab15d42}{}\label{cgi_8h_ab723ae3d4297ea0eb77cf3130ab15d42}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"<image x=%d y=%d width=%d height=%d xlink:href=%s />\(\backslash\)n"}, \(\backslash\)
+                                                ESCALA * X, ESCALA* Y, ESCALA, ESCALA, 
+      \hyperlink{cgi_8h_a6852d85bc96a09e605bbf4a2dcfc7a5c}{IMAGE\_PATH} FICHEIRO)
+\end{DoxyCode}
+
+
+Macro para criar uma imagem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & A coordenada X do canto superior esquerdo \\
+\hline
+{\em Y} & A coordenada Y do canto superior esquerdo \\
+\hline
+{\em E\+S\+C\+A\+LA} & A escala da imagem \\
+\hline
+{\em F\+I\+C\+H\+E\+I\+RO} & O caminho para o link do ficheiro \\
+\hline
+\end{DoxyParams}
+\index{cgi.\+h@{cgi.\+h}!Q\+U\+A\+D\+R\+A\+DO@{Q\+U\+A\+D\+R\+A\+DO}}
+\index{Q\+U\+A\+D\+R\+A\+DO@{Q\+U\+A\+D\+R\+A\+DO}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{Q\+U\+A\+D\+R\+A\+DO}{QUADRADO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\+U\+A\+D\+R\+A\+DO(
+\begin{DoxyParamCaption}
+\item[{}]{X, }
+\item[{}]{Y, }
+\item[{}]{E\+S\+C\+A\+LA, }
+\item[{}]{C\+OR}
+\end{DoxyParamCaption}
+)}\hypertarget{cgi_8h_a1ae379b260243788ce152a7b87ec0e03}{}\label{cgi_8h_a1ae379b260243788ce152a7b87ec0e03}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"<rect x=%d y=%d width=%d height=%d fill=%s />\(\backslash\)n"}, \(\backslash\)
+                                                ESCALA * X, ESCALA* Y, ESCALA, ESCALA, COR)
+\end{DoxyCode}
+
+
+Macro para criar um quadrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & A coordenada X do canto superior esquerdo \\
+\hline
+{\em Y} & A coordenada Y do canto superior esquerdo \\
+\hline
+{\em E\+S\+C\+A\+LA} & A escala do quadrado \\
+\hline
+{\em C\+OR} & A cor de preenchimento do quadrado \\
+\hline
+\end{DoxyParams}
+\index{cgi.\+h@{cgi.\+h}!Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP@{Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP}}
+\index{Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP@{Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP}!cgi.\+h@{cgi.\+h}}
+\subsubsection[{\texorpdfstring{Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP}{QUADRADO_TRANSP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\+U\+A\+D\+R\+A\+D\+O\+\_\+\+T\+R\+A\+N\+SP(
+\begin{DoxyParamCaption}
+\item[{}]{X, }
+\item[{}]{Y, }
+\item[{}]{E\+S\+C\+A\+LA}
+\end{DoxyParamCaption}
+)}\hypertarget{cgi_8h_ab83020f9f404d7900a10e23de7a743e7}{}\label{cgi_8h_ab83020f9f404d7900a10e23de7a743e7}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"<rect x=%d y=%d width=%d height=%d opacity=0 />\(\backslash\)n"}, \(\backslash\)
+                                                ESCALA * X, ESCALA* Y, ESCALA, ESCALA)
+\end{DoxyCode}
