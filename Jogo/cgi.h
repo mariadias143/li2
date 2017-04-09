@@ -22,7 +22,7 @@ Macros úteis para gerar CGIs
 */
 #define ABRIR_SVG(tamx, tamy)				printf("<svg width=%d height=%d>\n", tamx, tamy)
 
-#define BACKGROUND             printf("<image width=500 height=500 xlink:href=http://localhost/images/sword-sworcery-768x576.jpg />\n")
+#define BACKGROUND             printf("<image width=500 height=500 xlink:href=http://localhost/images/space1.png />\n")
 
 /**
 \brief Macro para fechar um svg
