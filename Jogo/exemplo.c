@@ -97,11 +97,11 @@ ESTADO inicializar_obstaculos (ESTADO e, int num){
 
 ESTADO inicializar() {
 	ESTADO e = {{0}};
-	e.jog.x = random() % TAM;
-	e.jog.y = random() % TAM;
+	e.jog.x = 5;
+	e.jog.y = 9;
 	e.porta.x = random() % TAM;
 	e.porta.y = random() % TAM;
-	e = inicializar_inimigos(e, 20);
+	e = inicializar_inimigos(e, 15);
 	e = inicializar_obstaculos(e, 20);
 	return e;
 }
@@ -131,12 +131,14 @@ void imprime_movimentos(ESTADO e) {
 }
 
 void imprime_jogador(ESTADO e) {
-	IMAGEM(e.jog.x, e.jog.y, ESCALA, "DwellerN_03.png");
+	IMAGEM(e.jog.x, e.jog.y, ESCALA, "foguetao.png");
 	imprime_movimentos(e);
 }
 
 void imprime_porta (ESTADO e) {
-	IMAGEM(e.porta.x, e.porta.y, ESCALA, "heart.png");
+	//ABRIR_LINK("http://localhost/cgi-bin/exemplo?");
+	IMAGEM(e.porta.x, e.porta.y, ESCALA, "earth.png");
+	//FECHAR_LINK;
 }
 
 
@@ -154,13 +156,13 @@ ESTADO ler_estado(char *args) {
 void imprime_inimigos(ESTADO e) {
 	int i;
 	for(i = 0; i < e.num_inimigos; i++)
-		IMAGEM(e.inimigo[i].x, e.inimigo[i].y, ESCALA, "Driders_04.png");
+		IMAGEM(e.inimigo[i].x, e.inimigo[i].y, ESCALA, "alien1.png");
 }
 
 void imprime_obstaculos(ESTADO e) {
 	int i;
 	for(i = 0; i < e.num_obstaculos; i++)
-		IMAGEM(e.obstaculo[i].x, e.obstaculo[i].y, ESCALA, "lava_pool1.png");
+		IMAGEM(e.obstaculo[i].x, e.obstaculo[i].y, ESCALA, "rock.png");
 }
 
 
@@ -171,15 +173,15 @@ int main() {
 
 	COMECAR_HTML;
 	ABRIR_SVG(600, 600);
-    	BACKGROUND;
+    BACKGROUND;
 	for(y = 0; y < 10; y++)
 		for(x = 0; x < 10; x++)
 			imprime_casa_transparente(x, y);
 
 	imprime_inimigos(e);
 	imprime_obstaculos(e);
-    	imprime_porta(e);
-    	imprime_jogador(e);
+    imprime_porta(e);
+    imprime_jogador(e);
     
 
 	FECHAR_SVG;
