@@ -100,6 +100,26 @@ ESTADO inicializar() {
 	return e;
 }
 
+int returninimigo (ESTADO e, int x,int y){
+	int i;
+	for (i=0; i < e.num_inimigos; i++){
+			if (e.inimigo[i].x == x && e.inimigo[i].y == y)
+				return i;
+	}
+} 
+
+
+ESTADO ataca_inimigo (ESTADO e, int x, int y){
+	int i;
+	i = returninimigo(e,x,y);
+	for (i; i < e.num_inimigos; i++){
+			e.inimigo[i] = e.inimigo[i+1];
+	}
+	e.num_inimigos--;
+	return e;
+
+}	
+
 void imprime_movimento(ESTADO e, int dx, int dy) {
 	ESTADO novo = e;
 	int x = e.jog.x + dx;
@@ -107,8 +127,10 @@ void imprime_movimento(ESTADO e, int dx, int dy) {
 	char link[MAX_BUFFER];
 	if(!posicao_valida(x, y))
 		return;
-	if(posicao_ocupada(e, x, y) && !tem_porta(e, x, y))
+	if(tem_obstaculo(e, x, y) && !tem_porta(e,x,y))
 		return;
+	if(tem_inimigo(e,x,y))
+		novo = ataca_inimigo (e,x,y);
 	novo.jog.x = x;
 	novo.jog.y = y;
 	sprintf(link, "http://localhost/cgi-bin/exemplo?%s", estado2str(novo));
