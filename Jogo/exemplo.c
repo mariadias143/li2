@@ -120,6 +120,30 @@ ESTADO ataca_inimigo (ESTADO e, int x, int y){
 
 }	
 
+ESTADO moveinimigo (ESTADO e, int dx, int dy) {
+	int i, x, y;
+	for(i = 0; i < e.num_inimigos; i++) {
+		x = e.inimigo[i].x + dx;
+		y = e.inimigo[i].y + dy;
+		if(!posicao_valida(x, y))
+			return e;
+		if(tem_obstaculo(e, x, y) || tem_porta(e,x,y) || tem_jogador(e, x,y))
+			return e;
+		e.inimigo[i].x = x;
+		e.inimigo[i].y = y;
+	}
+	return e;
+}
+
+ESTADO moveinimigos (ESTADO e){
+	int dx, dy;
+		for (dx = -1; dx <= 1; dx++)
+			for (dy = -1; dy <= 1; dy++)
+			e = moveinimigo(e, dx, dy);
+	return e;
+}
+
+
 void imprime_movimento(ESTADO e, int dx, int dy) {
 	ESTADO novo = e;
 	int x = e.jog.x + dx;
@@ -133,6 +157,7 @@ void imprime_movimento(ESTADO e, int dx, int dy) {
 		novo = ataca_inimigo (e,x,y);
 	novo.jog.x = x;
 	novo.jog.y = y;
+	novo = moveinimigos(novo);
 	sprintf(link, "http://localhost/cgi-bin/exemplo?%s", estado2str(novo));
 	ABRIR_LINK(link);
 	imprime_casa_transparente(x, y);
