@@ -40,6 +40,13 @@ Macros úteis para gerar CGIs
 #define IMAGEM(X, Y, ESCALA, FICHEIRO)		printf("<image x=%d y=%d width=%d height=%d xlink:href=%s />\n", \
 												ESCALA * X, ESCALA* Y, ESCALA, ESCALA, IMAGE_PATH FICHEIRO)
 
+#define TEXTO(X, Y, ESCALA, TXT)		printf("<text x=%d y=%d>\n%s\n</text>\n", \
+												ESCALA * X, ESCALA * Y, TXT)
+
+#define GAME_OVER				printf("<image width=500 height=500 xlink:href=http://localhost/images/gameover.jpg />\n")
+
+#define REPLAY					printf("<image x= 375 y=175 width=100 height=100 xlink:href=http://localhost/images/portal.png />\n")
+
 /**
 \brief Macro para criar um quadrado
 @param X A coordenada X do canto superior esquerdo
