@@ -1,8 +1,20 @@
+/**
+@file estado.c
+
+Definição das funções que convertem strings em estados e vice-versa
+*/
+
 #include <stdio.h>
 #include "estado.h"
 
 #define MAX_BUFFER		10240
 
+
+/**
+\brief Função que converte um estado numa string
+@param e O estado
+@returns A string correspondente ao estado e
+*/
 char *estado2str(ESTADO e) {
 	static char buffer[MAX_BUFFER];
 	unsigned char *p = (unsigned char *) &e;
@@ -16,6 +28,11 @@ char *estado2str(ESTADO e) {
 	return buffer;
 }
 
+/**
+\brief Função que converte uma string num estado
+@param argumentos Uma string contendo os argumentos passados à CGI
+@returns O estado correspondente à string dos argumentos
+*/
 ESTADO str2estado(char *argumentos) {
 	ESTADO e;
 	unsigned char *p = (unsigned char *) &e;

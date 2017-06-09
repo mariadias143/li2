@@ -22,7 +22,10 @@ Macros úteis para gerar CGIs
 */
 #define ABRIR_SVG(tamx, tamy)				printf("<svg width=%d height=%d>\n", tamx, tamy)
 
-#define BACKGROUND             printf("<image width=500 height=500 xlink:href=http://localhost/images/space1.png />\n")
+/**
+\brief Macro para criar a imagem de fundo
+*/
+#define BACKGROUND             printf("<image width=400 height=650 xlink:href=http://localhost/images/sky.jpg />\n")
 
 /**
 \brief Macro para fechar um svg
@@ -39,13 +42,24 @@ Macros úteis para gerar CGIs
 */
 #define IMAGEM(X, Y, ESCALA, FICHEIRO)		printf("<image x=%d y=%d width=%d height=%d xlink:href=%s />\n", \
 												ESCALA * X, ESCALA* Y, ESCALA, ESCALA, IMAGE_PATH FICHEIRO)
+/**
+\brief Macro para escrever texto
+@param X A coordenada X do canto superior esquerdo
+@param Y A coordenada Y do canto superior esquerdo
+@param ESCALA A escala da imagem
+@param TXT Texto a inserir
+*/
+#define TEXTO(X, Y, TXT)						printf("<text x=%d y=%d>\n%s\n</text>\n", \
+															X, Y, TXT)
+/**
+\brief Macro para criar a imagem de game over
+*/
+#define GAME_OVER							printf("<image width=400 height=650 xlink:href=http://localhost/images/abducted.jpg />\n")
 
-#define TEXTO(X, Y, ESCALA, TXT)						printf("<text x=%d y=%d>\n%s\n</text>\n", \
-															ESCALA * X, ESCALA * Y, TXT)
-
-#define GAME_OVER							printf("<image width=500 height=500 xlink:href=http://localhost/images/gameover.jpg />\n")
-
-#define REPLAY						printf("<image x= 375 y=175 width=100 height=100 xlink:href=http://localhost/images/portal.png />\n")
+/**
+\brief Macro para criar a imagem para reiniciar o jogo
+*/
+#define REPLAY						printf("<circle cx=210 cy=355 r=60 opacity=0 xlink:href=http://localhost/images/circulo.png />\n")
 
 /**
 \brief Macro para criar um quadrado
@@ -57,6 +71,19 @@ Macros úteis para gerar CGIs
 
 #define QUADRADO_TRANSP(X, Y, ESCALA)			printf("<rect x=%d y=%d width=%d height=%d opacity=0 />\n", \
 												ESCALA * X, ESCALA* Y, ESCALA, ESCALA)
+
+
+#define HP_BAR(X, Y) 				printf("<rect x=%d y=%d width=%d height=%d style=fill:red />\n", \
+																		X, Y, 150, 25);
+
+#define SCORE_BAR(X, Y)			printf("<rect x=%d y=%d width=%d height=%d style=fill:green />\n", \
+																		X, Y, 150, 25);
+
+#define ICON(X, Y, FICHEIRO)	printf("<image x=%d y=%d width=%d height=%d xlink:href=%s />\n", \
+																					X, Y, 25, 25, IMAGE_PATH FICHEIRO);
+
+#define PIC(X, Y, W, H, FICHEIRO) 	printf("<image x=%d y=%d width=%d height=%d xlink:href=%s />\n", \
+																					X, Y, W, H, IMAGE_PATH FICHEIRO);
 
 /**
 \brief Macro para abrir um link

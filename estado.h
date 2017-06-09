@@ -24,9 +24,10 @@ typedef struct posicao {
 typedef struct estado {
 	/** Nome do jogador */
 	char nome[80];
+	/** Pontos de vida do jogador */
 	int hp;
+	/** Score do jogador */
 	int score;
-	float escala;
 	/** \brief A posição do jogador */
 	POSICAO jog;
 	/** \brief O nº de inimigos */
