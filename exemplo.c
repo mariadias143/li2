@@ -18,14 +18,14 @@
 */
 
 /**
-\brief Função que verifica se a posiçao (x,y) é uma posição válida no mapa
+\brief Função que verifica se a posiçao (x,y) é uma posição válida no mapa.
 */
 int posicao_valida(int x, int y) {
 	return x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT;
 }
 
 /**
-\brief Função que verifica se as coordenadas de duas posições são iguais
+\brief Função que verifica se as coordenadas de duas posições são iguais.
 */
 int posicao_igual(POSICAO p, int x, int y) {
 	return p.x == x && p.y == y;
