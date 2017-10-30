@@ -18,7 +18,7 @@
 */
 
 /**
-\brief Função que verifica se a posiçao (x,y) é uma posição válida no mapa.
+\brief Função que verifica se. a posiçao (x,y) é uma posição válida no mapa.
 */
 int posicao_valida(int x, int y) {
 	return x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT;
