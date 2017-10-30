@@ -32,7 +32,7 @@ int posicao_igual(POSICAO p, int x, int y) {
 }
 
 /**
-\brief Função que verifica se existe jogador na posiçao (x,y)
+\brief Fu.nção que verifica se existe jogador na posiçao (x,y)
 */
 int tem_jogador (ESTADO e, int x, int y){
 	return posicao_igual(e.jog, x, y);
