@@ -50,7 +50,7 @@ int tem_inimigo (ESTADO e, int x, int y) {
 }
 
 /**
-\brief Função que verifica se existe um obstáculo na posiçao (x,y)
+\brief Fu.nção que verifica se existe um obstáculo na posiçao (x,y)
 */
 int tem_obstaculo (ESTADO e, int x, int y) {
 	int i;
